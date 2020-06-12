@@ -56,25 +56,25 @@ function Character(props) {
             </p>
 
             <p>
-              Hair: <span>{props.hair_color}</span>
+              Hair: <span>{props.character.hair_color}</span>
             </p>
             <p>
               Eyes: <span>{props.character.eye_color}</span>
             </p>
             <p>
-              Skin: <span>{props.skin_color}</span>
+              Skin: <span>{props.character.skin_color}</span>
             </p>
             <p>
-              Height: <span>{props.height}</span>
+              Height: <span>{props.character.height}</span>
             </p>
             <p>
-              gender: <span>{props.gender}</span>
+              gender: <span>{props.character.gender}</span>
             </p>
             <p>
-              Born: <span>{props.birth_year}</span>
+              Born: <span>{props.character.birth_year}</span>
             </p>
             <p>
-              Mass: <span>{props.mass}</span>
+              Mass: <span>{props.character.mass}</span>
             </p>
           </span>
         )}
