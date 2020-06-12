@@ -1,12 +1,24 @@
-div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
 header {
+  height: 10vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   background-color: blueviolet;
   width: 100%;
-  margin-bottom: 3rem;
+}
+.red {
+  display: flex;
+  align-items: flex-end;
+
+  color: red;
+  background-color: black;
+}
+.black {
+  color: black;
+  background-color: red;
+}
+h1 {
+  font-size: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

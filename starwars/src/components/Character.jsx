@@ -4,96 +4,79 @@ import styled from "styled-components";
 
 function Character(props) {
   const [showDetails, setShowDetails] = useState(false);
-  const tablet = "(max-width: 800px)";
 
   const StylesDetails = styled.div`
-    @media ${tablet} {
-      color: purple;
-    }
-    border: 1px solid black;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    p {
-          color: blue;
-      }
-    button {
-      margin-bottom: 2rem;
-      border-radius: 0.5rem;
-      color: aqua;
-      background-color: brown;
-    }
     .name {
-      border: 1px solid black;
-      background-color: #6495ED;
+      margin-top: 5rem;
+      background-color: #191970;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      color: bisque;
+      color: #00ff00;
       width: 50%;
+      h2 {
+        color: #98fb98;
       }
-      .details {
-          color: green;
-      }
-     h1{
-         color: black;
-     }
-     span{
-         width: 50%;
-         background-color: white;
-         color: green;
-     }
+    }
+    button {
+      width: 7rem;
+      height: 3rem;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+      color: red;
+      background-color: black;
+    }
+    span {
+      width: 50%;
+      background-color: black;
+      color: red;
+      padding-bottom: 2rem;
     }
   `;
+
   return (
     <StylesDetails>
       <span className="name">
-        <h1>{props.name}</h1>
+        <h2>{props.character.name}</h2>
       </span>
       <span className="details">
-        <button onClick={() => setShowDetails(!showDetails)}>Details</button>
+        <button type="primary" onClick={() => setShowDetails(!showDetails)}>
+          Details
+        </button>
         {showDetails && (
-          <div>
-            <span>
-              Name:
-              {props.name}
-              <p>
-                Hair:
-                <span>{props.hairColor}</span>
-              </p>
-              <p>
-                Eyes:
-                <span>{props.eyeColor}</span>
-              </p>
-              <p>
-                Skin:
-                <span>{props.skinColor}</span>
-              </p>
-              <p>
-                Height:
-                <span>{props.height}</span>
-              </p>
-              <p>
-                gender
-                <span>{props.gender}</span>
-              </p>
-              <p>
-                Born:
-                <span>{props.birthYear}</span>
-              </p>
-              <p>
-                Mass:
-                <span>{props.mass}</span>
-              </p>
-              <p>
-                Species:
-                <span>{props.species}</span>
-              </p>
-            </span>
-          </div>
+          <span>
+            <p>
+              Name: <span>{props.character.name}</span>
+            </p>
+
+            <p>
+              Hair: <span>{props.hair_color}</span>
+            </p>
+            <p>
+              Eyes: <span>{props.character.eye_color}</span>
+            </p>
+            <p>
+              Skin: <span>{props.skin_color}</span>
+            </p>
+            <p>
+              Height: <span>{props.height}</span>
+            </p>
+            <p>
+              gender: <span>{props.gender}</span>
+            </p>
+            <p>
+              Born: <span>{props.birth_year}</span>
+            </p>
+            <p>
+              Mass: <span>{props.mass}</span>
+            </p>
+          </span>
         )}
       </span>
     </StylesDetails>

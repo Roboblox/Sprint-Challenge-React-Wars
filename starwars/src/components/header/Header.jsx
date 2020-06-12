@@ -3,11 +3,14 @@ import "./header.css";
 
 function Header(props) {
   return (
-    <div>
-      <header>
-        <h1>Star Wars Characters</h1>
-      </header>
-    </div>
+    <header>
+      <div className="red">
+        <h1>Star</h1>
+      </div>
+      <div className="black">
+        <h1>Wars</h1>
+      </div>
+    </header>
   );
 }
 
